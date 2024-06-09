@@ -11,17 +11,21 @@ function submitSupportForm(event) {
     alert("Destek talebiniz alındı. En kısa sürede size geri dönüş yapılacaktır.");
 }
 document.getElementById("searchInput").addEventListener("keypress", function(event) {
-   
+
     if (event.key === 'Enter') {
         searchOnAmazon();
     }
 });
 
+document.getElementById("searchButton").addEventListener("click", function() {
+    searchOnAmazon();
+});
+
 function searchOnAmazon() {
-   
+
     var searchTerm = document.getElementById("searchInput").value;
 
-
+ 
     var amazonURL = "https://www.amazon.com.tr/s?k=" + encodeURIComponent(searchTerm);
 
 
